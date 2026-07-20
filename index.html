@@ -45,34 +45,38 @@ body {
 .container {
     width: 100%;
     max-width: 420px;
-    height: 100dvh; /* Altura exata da viewport */
-    padding: 10px 0 0 0; /* Tiramos o padding lateral para o selo encostar nas bordas */
+    height: 100dvh;
+    padding: 15px 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.content-wrapper {
-    padding: 0 15px;
+/* BLOCO PRINCIPAL DENTRO DA TELA */
+.main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    padding: 0 20px;
+    flex: 1; /* Ocupa o espaço central de forma proporcional */
+    gap: 18px; /* Espaçamento padrão e equilibrado entre cada bloco */
 }
 
 /* FOTO DO TIPSTER */
 .profile-img {
-    max-width: 230px;
-    width: 55vw;
+    max-width: 200px;
+    width: 50vw;
     height: auto;
     object-fit: contain;
 }
 
-h1 {
+.title-box h1 {
     font-size: 28px;
     color: #ff0000;
-    margin: 5px 0;
+    margin: 0 0 8px 0;
     font-weight: bold;
     line-height: 1.1;
 }
@@ -80,16 +84,20 @@ h1 {
 .subtext {
     font-size: 15px;
     color: #d9d9d9;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
-/* BOTÃO */
+/* BOTÃO COM MARGEM DE RESPIRO */
+.btn-wrapper {
+    margin: 8px 0;
+}
+
 .button {
     display: inline-block;
     background-color: #ff0000;
     color: white;
-    padding: 14px 30px;
-    font-size: 18px;
+    padding: 16px 36px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 12px;
     text-decoration: none;
@@ -104,17 +112,26 @@ h1 {
 /* ANIMAÇÃO PULSO */
 @keyframes pulse {
     0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,0,0,0.7); }
-    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255,0,0,0); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(255,0,0,0); }
     100% { transform: scale(1); }
 }
 
+/* BLOCO DO RODAPÉ (ALERT + COPYRIGHT + SELO) */
+.footer-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
 .alert-box {
-    margin: 5px 0;
+    padding: 0 20px;
 }
 
 .alert-box h2 {
     color: #00ff66;
-    font-size: 17px;
+    font-size: 16px;
     margin: 0 0 4px 0;
 }
 
@@ -127,10 +144,10 @@ h1 {
 .footer {
     font-size: 11px;
     color: #777;
-    margin-bottom: 2px;
+    padding: 0 20px;
 }
 
-/* SELO POR EXTENSO NO FIM DA PÁGINA (100% LARGURA) */
+/* SELO NO FIM DA PÁGINA (EXTENSO) */
 .stamp-bottom {
     width: 100%;
     display: block;
@@ -144,29 +161,33 @@ h1 {
 
 <div class="container">
 
-    <div class="content-wrapper">
+    <!-- BLOCO SUPERIOR / CENTRAL (EQUILIBRADO) -->
+    <div class="main-content">
         <img src="foto-perfil-6.png" alt="Foto do Tipster" class="profile-img">
 
-        <h1>BILHETE<br>LIBERADO</h1>
-        <div class="subtext">
-            Clique no botão abaixo pra pegar seu bilhete!
+        <div class="title-box">
+            <h1>BILHETE<br>LIBERADO</h1>
+            <p class="subtext">Clique no botão abaixo pra pegar seu bilhete!</p>
         </div>
 
-        <!-- BOTÃO -->
-        <a href="https://rd.redirecionar.online/" class="button" onclick="trackClick()">PEGAR AGORA</a>
+        <div class="btn-wrapper">
+            <a href="https://rd.redirecionar.online/" class="button" onclick="trackClick()">PEGAR AGORA</a>
+        </div>
     </div>
 
-    <div class="alert-box content-wrapper">
-        <h2>⚠ Entre e aguarde</h2>
-        <p>As entradas serão enviadas em instantes!</p>
-    </div>
+    <!-- BLOCO INFERIOR (ORGANIZADO) -->
+    <div class="footer-wrapper">
+        <div class="alert-box">
+            <h2>⚠ Entre e aguarde</h2>
+            <p>As entradas serão enviadas em instantes!</p>
+        </div>
 
-    <div class="footer content-wrapper">
-        Copyright © 2026 – Todos os direitos reservados
-    </div>
+        <div class="footer">
+            Copyright © 2026 – Todos os direitos reservados
+        </div>
 
-    <!-- SELO EXTENSO DE PONTA A PONTA NO FIM DA LP -->
-    <img src="BATEUBET.png" alt="Selo Bateubet / Ministério da Fazenda" class="stamp-bottom">
+        <img src="BATEUBET.png" alt="Selo Bateubet / Ministério da Fazenda" class="stamp-bottom">
+    </div>
 
 </div>
 

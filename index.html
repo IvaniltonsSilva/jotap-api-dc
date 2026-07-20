@@ -46,7 +46,7 @@ body {
     width: 100%;
     max-width: 420px;
     height: 100dvh;
-    padding: 15px 0 0 0;
+    padding: 10px 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,17 +58,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly; /* Distribui melhor os elementos verticalmente */
     width: 100%;
     padding: 0 20px;
-    flex: 1; /* Ocupa o espaço central de forma proporcional */
-    gap: 18px; /* Espaçamento padrão e equilibrado entre cada bloco */
+    flex: 1; 
 }
 
-/* FOTO DO TIPSTER */
+/* FOTO DO TIPSTER MAIOR */
 .profile-img {
-    max-width: 200px;
-    width: 50vw;
+    max-width: 250px;
+    width: 60vw;
     height: auto;
     object-fit: contain;
 }
@@ -76,7 +75,7 @@ body {
 .title-box h1 {
     font-size: 28px;
     color: #ff0000;
-    margin: 0 0 8px 0;
+    margin: 0 0 6px 0;
     font-weight: bold;
     line-height: 1.1;
 }
@@ -87,16 +86,17 @@ body {
     margin: 0;
 }
 
-/* BOTÃO COM MARGEM DE RESPIRO */
+/* BOTÃO MAIS CENTRALIZADO */
 .btn-wrapper {
-    margin: 8px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .button {
     display: inline-block;
     background-color: #ff0000;
     color: white;
-    padding: 16px 36px;
+    padding: 16px 38px;
     font-size: 20px;
     font-weight: bold;
     border-radius: 12px;
@@ -122,7 +122,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 }
 
 .alert-box {
@@ -161,7 +161,7 @@ body {
 
 <div class="container">
 
-    <!-- BLOCO SUPERIOR / CENTRAL (EQUILIBRADO) -->
+    <!-- BLOCO SUPERIOR / CENTRAL -->
     <div class="main-content">
         <img src="foto-perfil-6.png" alt="Foto do Tipster" class="profile-img">
 
@@ -175,7 +175,7 @@ body {
         </div>
     </div>
 
-    <!-- BLOCO INFERIOR (ORGANIZADO) -->
+    <!-- BLOCO INFERIOR -->
     <div class="footer-wrapper">
         <div class="alert-box">
             <h2>⚠ Entre e aguarde</h2>

@@ -71,11 +71,18 @@ h1 {
     100% { transform: scale(1); }
 }
 
+/* ESTILO DO SELO ABAIXO DO BOTÃO */
+.stamp-button {
+    display: block;
+    margin: 25px auto 0 auto;
+    max-width: 90%;
+    width: 380px;
+    height: auto;
+}
+
 .alert-box {
-    margin-top: 60px;
+    margin-top: 40px;
     padding: 30px;
-    
- 
 }
 
 .alert-box h2 {
@@ -92,20 +99,14 @@ h1 {
     font-size: 14px;
     color: #777;
 }
-
-/* ESTILO DO SELO */
-.stamp {
-    display: block;
-    margin: 20px auto; /* Centraliza a imagem horizontally e adiciona margem vertical */
-    max-width: 100%; /* Garante que o selo não ultrapasse a largura da tela em dispositivos menores */
-    height: auto; /* Mantém a proporção da imagem */
-}
 </style>
 
 </head>
 <body>
 
-<img src="foto-perfil-6.png" alt="Foto do Tipster" style="width: 350px; height: auto; object-fit: contain; margin-bottom: 20px;">
+<div class="container">
+
+    <img src="foto-perfil-6.png" alt="Foto do Tipster" style="width: 350px; height: auto; object-fit: contain; margin-bottom: 20px;">
 
     <h1>BILHETE<br>LIBERADO</h1>
 
@@ -113,7 +114,10 @@ h1 {
         Clique no botão abaixo pra pegar seu bilhete!
     </div>
 
+    <!-- BOTÃO E SELO LOGO ABAIXO -->
     <a href="https://rd.redirecionar.online/" class="button" onclick="trackClick()">PEGAR AGORA</a>
+    
+    <img src="BATEUBET.png" alt="Selo Bateubet / Ministério da Fazenda" class="stamp-button">
 
     <div class="alert-box">
         <h2>⚠ Entre e aguarde</h2>
@@ -126,9 +130,6 @@ h1 {
 
 </div>
 
-<!-- SELO INCLUÍDO AQUI -->
-<img src="BATEUBET.png" alt="Selo Bateubet" class="stamp">
-
 <script>
 function trackClick() {
     fbq('track', 'Search'); // Evento padrão Lead
@@ -138,6 +139,4 @@ function trackClick() {
 </script>
 
 </body>
-
-
 </html>

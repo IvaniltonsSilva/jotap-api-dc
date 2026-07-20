@@ -92,6 +92,14 @@ h1 {
     font-size: 14px;
     color: #777;
 }
+
+/* ESTILO DO SELO */
+.stamp {
+    display: block;
+    margin: 20px auto; /* Centraliza a imagem horizontally e adiciona margem vertical */
+    max-width: 100%; /* Garante que o selo não ultrapasse a largura da tela em dispositivos menores */
+    height: auto; /* Mantém a proporção da imagem */
+}
 </style>
 
 </head>
@@ -118,6 +126,9 @@ h1 {
 
 </div>
 
+<!-- SELO INCLUÍDO AQUI -->
+<img src="BATEUBET.png" alt="Selo Bateubet" class="stamp">
+
 <script>
 function trackClick() {
     fbq('track', 'Search'); // Evento padrão Lead
@@ -130,6 +141,3 @@ function trackClick() {
 
 
 </html>
-
-
-
